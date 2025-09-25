@@ -5,6 +5,7 @@ int main() {
     char choice;
     printf("Enter the two numbers: ");
     scanf("%d %d", &x, &y);
+    start:
     printf("Enter the Operator (+,-,*,/)\n");
     scanf(" %c", &choice);
     switch (choice) {
@@ -22,6 +23,7 @@ int main() {
         break;
     default:
         printf("Invalid Operator Input\n");
+        goto  start;
     }
     return 0;
 }
